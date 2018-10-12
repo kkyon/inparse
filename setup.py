@@ -9,11 +9,11 @@ def read(fname):
 
 
 setup(name='inparse',
-      description='Collaborative AI  Driven Web Scraping, Data Extraction and Crawling,Knowledge Graph'
+      description='Collaborative AI for  Web Scraping, Data Extraction and Crawling,Knowledge Graph'
                   ' ',
       long_description=read("README.rst"),
-      version='0.2.0',
-      url='https://github.com/kkyon/inparse',
+      version='0.1.0',
+      url='https://github.com/inparse/inparse',
       author='Guojian Li',
       author_email='guojianlee@gmail.com',
       license='BSD',
