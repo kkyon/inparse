@@ -22,11 +22,11 @@ http://inparse.com
 
 
 
-Philosophy
+Motivation
 ==========
 
 
-How to work ?
+Sample
 ===============================
 
 
