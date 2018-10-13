@@ -4,7 +4,7 @@ In.parse
 0.1.0
 
 
-Open Collaborative AI Driven  Web Scraping, Data Extraction and Crawling,Knowledge Graph
+Open Collaborative AI Driven Parser builder for Web Scraping, Data Extraction and Crawling,Knowledge Graph
 
 
 Installing
@@ -71,7 +71,8 @@ Inparse.pretty_print(d)
 ```
 
 Below is output of Article data extraction 
-```json
+
+```
 
     {   'article_body': '<div><p>Last week, American dating app <a '
                         'href="https://qz.com/india/1413051/priyanka-chopra-invests-in-dating-app-bumble-to-rival-tinder/">Bumble '
