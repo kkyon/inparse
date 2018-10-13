@@ -11,7 +11,7 @@ def read(fname):
 setup(name='inparse',
       description='Collaborative AI for  Web Scraping, Data Extraction and Crawling,Knowledge Graph'
                   ' ',
-      long_description=read("README.rst"),
+      long_description=read("README.md"),
       version='0.1.0',
       url='https://github.com/inparse/inparse',
       author='Guojian Li',
