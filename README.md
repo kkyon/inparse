@@ -4,7 +4,7 @@ In.parse
 0.1.0
 
 
-Open Collaborative AI for  Web Scraping, Data Extraction and Crawling,Knowledge Graph
+Open Collaborative AI Driven  Web Scraping, Data Extraction and Crawling,Knowledge Graph
 
 
 Installing
