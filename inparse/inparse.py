@@ -40,6 +40,8 @@ class Inparse(object):
             rule_dict={}
             for r in rl:
                 rule_dict[r['name']]=r
+                if 'parent_name' not in r:
+                    r['parent_name'] = None
 
 
             return rule_dict
@@ -68,8 +70,9 @@ class Inparse(object):
 
             parent_name=set()
             for id,r in self.rules.items():
-                if r['parent_name']:
+                if   r['parent_name']:
                     parent_name.add(r['parent_name'])
+
 
 
 
@@ -131,7 +134,7 @@ class Inparse(object):
             ## will keep tgas
             content=''
             for n in nodes:
-                content+=str(n)
+                content+=tostring(n,encoding='unicode')
 
             article_cleaner = lxml.html.clean.Cleaner()
             article_cleaner.javascript = True
@@ -155,12 +158,12 @@ class Inparse(object):
         def image_clean(cls,nodes):
             src=set()
             for n in nodes:
-                if n.name == 'img' and 'src' in n.attrs:
-                    src.add(n.attrs['src'])
+                if n.tag == 'img' and 'src' in n.attrib:
+                    src.add(n.attrib['src'])
                 else:
-                    for cn in n.find_all('img'):
-                        if cn.name == 'img' and 'src' in n.attrs:
-                            src.add(n.attrs['src'])
+                    for cn in n.xpath('//img'):
+                        if cn.tag == 'img' and 'src' in n.attrib:
+                            src.add(n.attrib['src'])
 
 
             return list(src)
@@ -168,23 +171,38 @@ class Inparse(object):
 
         @classmethod
         def date_clean(cls,nodes):
-            text=''
-            for n in nodes:
-                text=n.text.strip()
 
-                try:
-                    for s in text.split(' '):
-                        print(s)
-                        return date_parser(s)
-                except:
-                    pass
-            return None
+            for node in nodes:
+                if node.xpath('//time'):
+                    try:
+                        text=node.xpath('//time')[0].text
+                        return date_parser(text)
+                    except:
+                        pass
+
+                for t in node.itertext():
+
+                    try:
+
+                        return date_parser(t)
+                    except:
+                        for tt in t.split(' '):
+                            if len(tt) <6:
+                                continue
+                            try:
+                                return date_parser(tt)
+                            except:
+                                pass
+                        pass
+
+
 
         @classmethod
         def text_clean(cls,nodes):
             text=''
-            for n in nodes:
-                text+=n.text
+            for node in nodes:
+
+                text+=' '.join(node.itertext()).strip()
             return text.strip(' ')
 
 
@@ -193,7 +211,7 @@ class Inparse(object):
 
         @classmethod
         def table_cell_clean(cls,node):
-            return ''.join(node.itertext()).strip()
+            return ' '.join(node.itertext()).strip()
         @classmethod
         def table_clean(cls,nodes):
             result=[]

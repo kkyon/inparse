@@ -11,6 +11,7 @@ parser_json='''
 {
 "name": "article_body",
 "parent_sid": null,
+"parent_name": null,
 "selector": "div#endText",
 "sid": 11,
 "type": "article_body"
@@ -18,6 +19,7 @@ parser_json='''
 {
 "name": "publish_date",
 "parent_sid": null,
+"parent_name": null,
 "selector": "div.post_time_source",
 "sid": 12,
 "type": "publish_date"
@@ -25,6 +27,7 @@ parser_json='''
 {
 "name": "title",
 "parent_sid": null,
+"parent_name": null,
 "selector": "h1",
 "sid": 13,
 "type": "title"
@@ -32,6 +35,7 @@ parser_json='''
 {
 "name": "author",
 "parent_sid": null,
+"parent_name": null,
 "selector": "li[data-module-name='n_topnavapplist_t_0']",
 "sid": 14,
 "type": "author"
@@ -39,6 +43,7 @@ parser_json='''
 {
 "name": "top_image",
 "parent_sid": null,
+"parent_name": null,
 "selector": "div.post_next_post.clearfix",
 "sid": 15,
 "type": "top_image"
