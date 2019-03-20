@@ -1,7 +1,7 @@
 
 In.parse
 =========
-0.1.0
+ 
 
 
 Open Collaborative AI Driven Parser builder for Web Scraping, Data Extraction and Crawling,Knowledge Graph
@@ -10,30 +10,30 @@ Open Collaborative AI Driven Parser builder for Web Scraping, Data Extraction an
 
 
 
-1.Build Parser with: 
--------------------
+## 1.Build Parser with: 
+ 
 
 http://inparse.com
 
 
 
 
-2.Call Parser in your favaritor way :
---------------------------------------
+## 2.Call Parser in your favaritor way :
  
- You have three ways to execute parser in detail page . etc: http://inparse.com/parser/628128d0
+ 
+There are three ways to execute parser in detail page . etc: http://inparse.com/parser/628128d0
 
-a).Call Parser Directly:
---------------------
+#### a).Call Parser Directly:
+ 
 http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8&url=https%3A%2F%2Fmedium.com%2Faccel-india-insights%2Fmaintaining-productivity-as-engineering-teams-scale-1a821f5add28
 
-b).Get Parser rule:
------------------
+#### b).Get Parser rule:
+ 
 http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8
 
 
-c). Call Parser locally with SDK:
------------------------------
+#### c). Call Parser locally with SDK:
+ 
 
 `pip install -U inparse`
 
