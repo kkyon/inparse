@@ -36,13 +36,21 @@ if you have concern.
 
 
 
-Example
+Ways to excute parser:
 ===============================
 
 
+# Call Parser Directly:
+--------------------
+http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8&url=https%3A%2F%2Fmedium.com%2Faccel-india-insights%2Fmaintaining-productivity-as-engineering-teams-scale-1a821f5add28
+
+Get Parser rule:
+-----------------
+http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8&url=https%3A%2F%2Fmedium.com%2Faccel-india-insights%2Fmaintaining-productivity-as-engineering-teams-scale-1a821f5add28
 
 
-
+Call Parser locally with SDK:
+-----------------------------
 ```python
 from inparse import Inparse
 p=Inparse('b45beddc',  #parser no is generator by inparse.com parser builder.
