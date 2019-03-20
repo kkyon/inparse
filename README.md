@@ -6,51 +6,37 @@ In.parse
 
 Open Collaborative AI Driven Parser builder for Web Scraping, Data Extraction and Crawling,Knowledge Graph
 
-
-Installing
-----------
-
-Install and update using ``pip``:
-
-`pip install -U inparse`
+ 
 
 
-Parser Generator 
------------------
+
+1.Build Parser with: 
+-------------------
 
 http://inparse.com
 
 
 
 
-Motivation
-----------
-1. Most painful thing of Web Data Extraction is to write parser rule. the Inparse try to 
-generate the parser by AI according the training web pages.
-2. Commercial Universal Parser work good in Statistics, but failed in my case .And blackbox to user. 
-Inparser create parser for special website ,web page category。And be correctable and improvable online by yourself.
-3. Open and free to create parser .Parser rule can be cached locally without remote server 
-if you have concern.  
-4. You will not be charged by usage. Run parser in your own CPU. 
+2.Call Parser in your favaritor way :
+--------------------------------------
  
+ You have three ways to execute parser in detail page . etc: http://inparse.com/parser/628128d0
 
-
-
-Ways to excute parser:
-===============================
-
-
-# Call Parser Directly:
+a).Call Parser Directly:
 --------------------
 http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8&url=https%3A%2F%2Fmedium.com%2Faccel-india-insights%2Fmaintaining-productivity-as-engineering-teams-scale-1a821f5add28
 
-Get Parser rule:
+b).Get Parser rule:
 -----------------
-http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8&url=https%3A%2F%2Fmedium.com%2Faccel-india-insights%2Fmaintaining-productivity-as-engineering-teams-scale-1a821f5add28
+http://inparse.com/api/parser/?parser_no=628128d0&access_token=037ce4079d21b47ac8bbc730a6da0ba8
 
 
-Call Parser locally with SDK:
+c). Call Parser locally with SDK:
 -----------------------------
+
+`pip install -U inparse`
+
 ```python
 from inparse import Inparse
 p=Inparse('b45beddc',  #parser no is generator by inparse.com parser builder.
@@ -97,16 +83,12 @@ Below is output of Article data extraction
 ```
 
 
-
-More about Inparse
-===============
-
+ 
       
 
 Contributing
 ------------
-You are welcome to port this SDK to Java, Go ,or any other programming languages.
-
+ 
 Donate
 ------
 
