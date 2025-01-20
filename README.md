@@ -9,7 +9,7 @@ Open Collaborative AI Driven Parser builder for Web Scraping, Data Extraction an
  
 
 
-Try new AI-Powered version:
-www.coparser.com
-https://github.com/CoParser/CoParser
+# Try new AI-Powered version:
+# www.coparser.com
+# https://github.com/CoParser/CoParser
 -----
